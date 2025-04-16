@@ -16,6 +16,6 @@ spec:
     spec: 
       containers:
       - name: nginx 
-        image: nginx:{{ .Values.deployment.imageversion }}
+        image: shaikmustafa/netflix
         ports:
         - containerPort: 80
