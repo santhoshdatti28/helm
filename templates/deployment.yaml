@@ -5,7 +5,7 @@ metadata:
 spec: 
   replicas: {{ .Values.deployment.replicas}}
   selector: 
-    matchLables:
+    matchLabels:
       app: nginx
       project: expense 
   template: 
