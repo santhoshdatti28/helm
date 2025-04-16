@@ -1,7 +1,7 @@
 apiVersion: apps/v1 
 kind: Deployment 
 metadata: 
-  name: my-depolyment 
+  name: my-deployment 
 spec: 
   replicas: {{ .Values.deployment.replicas}}
   selector: 
