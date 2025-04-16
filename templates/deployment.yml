@@ -1,0 +1,21 @@
+apiVersion: v1 
+kind: Deployment 
+metadata: 
+  name: my-depolyment 
+spec: 
+  replicas: {{ .Values.deployment.replicas}}
+  selector: 
+    matchLables:
+      app: nginx
+      project: expense 
+  template: 
+    metadata:
+      labels: 
+        app: nginx
+        project: expense
+    spec: 
+      containers:
+      - name: nginx 
+        image: nginx:{{ .Values.deployment.imageversion }}
+        ports:
+        - containerPort: 80
